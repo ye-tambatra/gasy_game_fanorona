@@ -12,31 +12,26 @@ const logic = {
 			[7, 4, 5],
 		];
 		const availableDirections = [];
-		for (let j of adjacency[i]) {
-			if (stateValue[j] === 0) {
-				availableDirections.push(j);
+		for (let neighbor of adjacency[i]) {
+			if (stateValue[neighbor] === 0) {
+				availableDirections.push(neighbor);
 			}
 		}
 		return availableDirections;
 	},
 
 	checkWinner(stateValue) {
-		// Define winning patterns
 		const winningPatterns = [
-			// Rows
 			[0, 1, 2],
 			[3, 4, 5],
 			[6, 7, 8],
-			// Columns
 			[0, 3, 6],
 			[1, 4, 7],
 			[2, 5, 8],
-			// Diagonals
 			[0, 4, 8],
 			[2, 4, 6],
 		];
 
-		// Check for winning patterns
 		for (const pattern of winningPatterns) {
 			const [a, b, c] = pattern;
 			if (
@@ -44,10 +39,10 @@ const logic = {
 				stateValue[a] === stateValue[b] &&
 				stateValue[a] === stateValue[c]
 			) {
-				return stateValue[a]; // Return the winning symbol (either "X" or "O")
+				return stateValue[a];
 			}
 		}
 
-		return null; // No winner found
+		return null;
 	},
 };

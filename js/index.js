@@ -94,7 +94,7 @@ function showAvailableDirection(stateValue, i) {
 		player
 	);
 	availableDirections.forEach((i) => {
-		pointsContainer[i].append(ui.createHoverPoint());
+		pointsContainer[i].append(ui.createHoverPoint(player));
 	});
 }
 

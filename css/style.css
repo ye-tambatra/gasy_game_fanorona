@@ -1,12 +1,29 @@
-body {
-    margin: 50px;
-}
 :root {
     --board-width: 400px; 
     --board-height: 400px;
+    --point-width: 35px; 
+    --point-height: 35px;
     --line-width: 2px; 
     --line-color: grey;
 }
+
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: url("../assets/background.jpg") repeat-x;
+    background-size: cover;
+}
+
 .board {
     width: var(--board-width);
     height: var(--board-height);
@@ -64,36 +81,38 @@ body {
     justify-content: space-between;
 }
 .point-container {
+    position: relative;
     cursor: pointer;
     width: 50px; 
     height: 50px;
-    background-color: rgb(197, 197, 197);
+    background-color: rgba(197, 197, 197);
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .point {
-    width: 30px; 
-    height: 30px;
+    width: var(--point-width); 
+    height: var(--point-height);
     border-radius: 100%;
-    transition: background 0.3s ease;
-    transition: border-color 0.5s ease;
+    transition: all 0.2s ease;
 }
 .point.selected {
-
-    border: 4px solid white
+    box-shadow: 3px 3px 2px grey;
+    border: 4px solid white;
 }
 .player-1 {
-    background-color: red;
+    background-image: url("../assets/rock.jpg");
+    background-size: cover;
 }
 .player-2 {
-    background-color: blue;
+    background-image: url("../assets/point2.jpg");
+    background-size: cover;
 }
 .hover-point {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(0, 255, 0);
+    width: var(--point-width);
+    height: var(--point-height);
+    opacity: 0.6;
     border-radius: 100%;
 }
 .current-player {
@@ -119,5 +138,27 @@ body {
     right: -25px;
 }
 .game-info {
-    margin-top: 70px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(241, 238, 238);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.current-player {
+    width: var(--point-width);
+    height: var(--point-height);
+}
+.restart {
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 30px;
 }
