@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="board">
+			<div class="lines-container">
+				<div class="line" id="vertical"></div>
+				<div class="line" id="horizontal"></div>
+				<div class="line" id="diagonal-left"></div>
+				<div class="line" id="diagonal-right"></div>
+			</div>
+			<div class="points-container">
+				<div class="row" id="row-0">
+					<div class="point-container" id="point-container-0"></div>
+					<div class="point-container" id="point-container-1"></div>
+					<div class="point-container" id="point-container-2"></div>
+				</div>
+				<div class="row" id="row-1">
+					<div class="point-container" id="point-container-3"></div>
+					<div class="point-container" id="point-container-4"></div>
+					<div class="point-container" id="point-container-5"></div>
+				</div>
+				<div class="row" id="row-2">
+					<div class="point-container" id="point-container-6"></div>
+					<div class="point-container" id="point-container-7"></div>
+					<div class="point-container" id="point-container-8"></div>
+				</div>
+			</div>
+		</div>
+		<div class="game-info">
+			<span>Current player :</span>
+			<div class="current-player"></div>
+			<button class="restart">Restart</button>
+		</div>
+
+		<script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/logic.js"></script>
+		<script src="./js/state.js"></script>
+		<script src="./js/ui.js"></script>
+		<script src="./js/selection.js"></script>
+		<script src="./js/player.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/info.js"></script>
+	</body>
+</html>
