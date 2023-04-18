@@ -10,7 +10,10 @@ player$.subscribe((value) => {
 });
 
 restartButton.on('click', function () {
+	restartGame();
+});
+function restartGame() {
 	player = PLAYER_1;
 	state.update(() => [1, 1, 0, 1, 0, 2, 0, 2, 2]);
 	initPoints();
-});
+}

@@ -113,6 +113,7 @@ state$.subscribe((stateValue) => {
 	if (winner !== null) {
 		isOver = true;
 		setTimeout(() => {
+			restartGame();
 			alert('Player ' + winner + ' wins the game');
 		}, 300);
 	}
