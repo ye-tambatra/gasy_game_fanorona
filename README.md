@@ -1,9 +1,11 @@
 # GASY GAME : --- FANORON-TELO ----
 
-### Nom : NOFINIAINA NATOLOJANAHARY
+#### Nom : NOFINIAINA NATOLOJANAHARY
 
-### Prénom : Tambatra
+#### Prénom : Tambatra
 
-### Classe : IGGLIA 3
+#### Classe : IGGLIA 3
 
-### Numéro : 39
+#### Numéro : 39
+
+### Live démo : https://github.com/ye-tambatra/gasy_game_fanorona
