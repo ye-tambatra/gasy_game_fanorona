@@ -1,3 +1,3 @@
 # GASY GAME : --- FANORON-TELO ----
 
-### Live démo : https://github.com/ye-tambatra/gasy_game_fanorona
+### Live démo : https://ye-tambatra.github.io/gasy_game_fanorona
