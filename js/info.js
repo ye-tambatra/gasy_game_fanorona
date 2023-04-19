@@ -3,9 +3,9 @@ const restartButton = $('.restart');
 
 player$.subscribe((value) => {
 	if (value === PLAYER_1) {
-		playerHtml.css('background-image', "url('./assets/rock.jpg')");
+		playerHtml.css('background-image', "url('./assets/player1.png')");
 	} else if (value === PLAYER_2) {
-		playerHtml.css('background-image', "url('./assets/point2.jpg')");
+		playerHtml.css('background-image', "url('./assets/player2.png')");
 	}
 });
 

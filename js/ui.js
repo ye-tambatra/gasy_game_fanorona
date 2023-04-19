@@ -8,9 +8,9 @@ const ui = {
 	createHoverPoint(player) {
 		let backgroundUrl;
 		if (player === 1) {
-			backgroundUrl = './assets/rock.jpg';
+			backgroundUrl = './assets/player1.png';
 		} else if (player === 2) {
-			backgroundUrl = './assets/point2.jpg';
+			backgroundUrl = './assets/player2.png';
 		}
 		const point = document.createElement('div');
 		point.setAttribute('class', 'hover-point');

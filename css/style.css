@@ -1,164 +1,165 @@
 :root {
-    --board-width: 400px; 
-    --board-height: 400px;
-    --point-width: 35px; 
-    --point-height: 35px;
-    --line-width: 2px; 
-    --line-color: grey;
+	--board-width: 400px;
+	--board-height: 400px;
+	--point-width: 35px;
+	--point-height: 35px;
+	--line-width: 2px;
+	--line-color: grey;
 }
 
-
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
 html {
-    display: table;
-    margin: auto;
+	display: table;
+	margin: auto;
 }
 
 body {
-    display: table-cell;
-    vertical-align: middle;
-    background: url("../assets/background.jpg") repeat-x;
-    background-size: cover;
+	display: table-cell;
+	vertical-align: middle;
+	background: url('../assets/background.webp');
+	background-size: cover;
 }
 
 .board {
-    width: var(--board-width);
-    height: var(--board-height);
-    border: var(--line-width) solid var(--line-color);
-    position: relative;
+	width: var(--board-width);
+	height: var(--board-height);
+	border: var(--line-width) solid var(--line-color);
+	position: relative;
 }
 .lines-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
 }
 .lines-container #vertical {
-    position: absolute;
-    height: 100%;
-    width: var(--line-width);
-    background-color: var(--line-color);
-    left: calc(var(--board-width) / 2);
+	position: absolute;
+	height: 100%;
+	width: var(--line-width);
+	background-color: var(--line-color);
+	left: calc(var(--board-width) / 2);
 }
 .lines-container #horizontal {
-    position: absolute;
-    width: 100%;
-    height: var(--line-width);
-    background-color: var(--line-color);
-    bottom: calc(var(--board-width) / 2);
+	position: absolute;
+	width: 100%;
+	height: var(--line-width);
+	background-color: var(--line-color);
+	bottom: calc(var(--board-width) / 2);
 }
 .lines-container #diagonal-left {
-    position: absolute;
-    width: 141.5%; /* Should be re-calculated in js */
-    height: var(--line-width); 
-    background-color: var(--line-color);
-    transform: rotate(45deg);
-    transform-origin: left;
+	position: absolute;
+	width: 141.5%; /* Should be re-calculated in js */
+	height: var(--line-width);
+	background-color: var(--line-color);
+	transform: rotate(45deg);
+	transform-origin: left;
 }
 .lines-container #diagonal-right {
-    position: absolute;
-    right: 0;
-    width: 141.5%; /* Should be re-calculated in js */
-    height: var(--line-width); 
-    background-color: var(--line-color);
-    transform: rotate(-45deg);
-    transform-origin: right;
+	position: absolute;
+	right: 0;
+	width: 141.5%; /* Should be re-calculated in js */
+	height: var(--line-width);
+	background-color: var(--line-color);
+	transform: rotate(-45deg);
+	transform-origin: right;
 }
 .points-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .points-container .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .point-container {
-    position: relative;
-    cursor: pointer;
-    width: 50px; 
-    height: 50px;
-    background-color: rgba(197, 197, 197);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: relative;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(197, 197, 197);
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .point {
-    width: var(--point-width); 
-    height: var(--point-height);
-    border-radius: 100%;
-    transition: all 0.2s ease;
+	width: var(--point-width);
+	height: var(--point-height);
+	border-radius: 100%;
+	transition: all 0.2s ease;
 }
 .point.selected {
-    box-shadow: 3px 3px 2px grey;
-    border: 4px solid white;
+	box-shadow: 3px 3px 2px grey;
+	border: 4px solid white;
 }
 .player-1 {
-    background-image: url("../assets/rock.jpg");
-    background-size: cover;
+	background-image: url('../assets/player1.png');
+	background-size: cover;
 }
 .player-2 {
-    background-image: url("../assets/point2.jpg");
-    background-size: cover;
+    background-image: url('../assets/player2.png');
+	background-size: cover;
 }
 .hover-point {
     width: var(--point-width);
-    height: var(--point-height);
-    opacity: 0.6;
-    border-radius: 100%;
+	height: var(--point-height);
+	opacity: 0.6;
+    background-size: cover;
 }
 .current-player {
-    width: 30px; 
-    height: 30px;
-    margin: 10px 0px;
+	width: 30px;
+	height: 30px;
+	margin: 10px 0px;
+    background-size: cover;
     border-radius: 100%;
 }
 #row-0 {
-    position: relative;
-    top: -30px
+	position: relative;
+	top: -30px;
 }
 #row-2 {
-    position: relative;
-    bottom: -30px;
+	position: relative;
+	bottom: -30px;
 }
 .row .point-container:first-child {
-    position: relative;
-    left: -25px;
+	position: relative;
+	left: -25px;
 }
 .row .point-container:last-child {
-    position: relative;
-    right: -25px;
+	position: relative;
+	right: -25px;
 }
 .game-info {
-    position: absolute;
-    border: 1px solid black;
-    border-radius: 2px;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgb(241, 238, 238);
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 2px;
+	margin: 20px;
+	padding: 10px;
+	background-color: rgb(241, 238, 238);
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .current-player {
-    width: var(--point-width);
-    height: var(--point-height);
+	width: var(--point-width);
+	height: var(--point-height);
 }
 .restart {
-    margin: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px 30px;
+	margin: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 20px 30px;
 }
