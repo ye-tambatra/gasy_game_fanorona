@@ -6,3 +6,7 @@ function togglePlayer() {
 	player = player === PLAYER_1 ? PLAYER_2 : PLAYER_1;
 	player$.next(player);
 }
+function resetPlayer() {
+	player = PLAYER_1;
+	player$.next(player);
+}
